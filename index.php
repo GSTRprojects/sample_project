@@ -15,7 +15,7 @@ $smarty->setCompileDir( 'templates/templates_c/' );
 $url = 'http://127.0.0.1/git/GSTRprojects/sample_project';
 
 $smarty->assign( 'url', $url );
-$smarty->assign( 'img', $url . 'assets/img/' );
+$smarty->assign( 'img', $url . '/assets/img/' );
 
 $smarty->assign( 'home', 'home.tpl' );
 $smarty->display( 'main.tpl' );
