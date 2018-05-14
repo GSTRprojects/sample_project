@@ -1,7 +1,7 @@
 @import "mixins.scss";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,700&subset=latin-ext');
 
-.Open-Sans {font-family:'Open Sans', sans-serif;}
+.Rubik {font-family:'Rubik', sans-serif;}
 .Novecentosanswide-Book {font-family:Novecentosanswide-Book;}
 .Novecentosanswide-Light {font-family:Novecentosanswide-Light;}
 .Novecentosanswide-Normal {font-family:Novecentosanswide-Normal;}
@@ -15,12 +15,13 @@ $twitter:#50abf1;
 $fb:#3a559f;
 
 $font-stack:Novecentosanswide-Light, sans-serif, Arial;
+$font-h3:Rubik;
 
 body {text-align:left; font-family:$font-stack;}
 
 h1 {font-size:80px; color:$color-1;}
-h2 {font-size:60px; color:$color-2;}
-h3 {font-size:40px; color:$color-2;}
+h2 {margin-top:0; font-size:14px; color:$color-2;}
+h3 {text-align:left; font-family:$font-h3; font-size:18px; color:$color-2;}
 
 
 /*NAVBAR START*/
@@ -55,7 +56,7 @@ h3 {font-size:40px; color:$color-2;}
   .navbar-static-top {position:fixed; top:0; right:0; left:0;}
 }
 
-/*TOP SECTION START*/
+/* TOP SECTION */
 #home {max-width:1920px;
   .background-top {position:relative; height:1080px; background:url('../img/background-top.jpg') 50% 50% no-repeat;
 		.caption-container {height:100%; text-align:center;
@@ -63,8 +64,72 @@ h3 {font-size:40px; color:$color-2;}
 		}
   }
 }
+@media (max-width:767px) {
+	#home {
+		.background-top {height:500px;
+			.caption-container {height:100%; text-align:center;
+				h1 {font-size:60px;}
+			}
+		}
+	}
+}
+@media (min-width:768px) and (max-width:991px) {
+	#home {
+		.background-top {height:700px;}
+	}
+}
 
-/* FOOTER START */
+
+/* PERSONAL DEVELOPMENT SECTION */
+#mid-section {max-width:1920px; margin:0 auto;
+	.mid-row {padding-top:40px; padding-bottom:15px;
+		.col-sm-2 {
+			.text-col {text-align:right;
+				h2 {font-size:10px; margin-top:0;}
+				p {font-weight:700; color:#000;}
+				a {color:#9b9b9b;}
+			}
+			.col-right {text-align:left;}
+		}
+		.image-box {
+			a {
+				.img100 {width:100%;}
+				h3 {text-align:left; font-size:18px; overflow:hidden;}
+			}
+			.article-footer {padding-left:0; text-align:left;
+				.rating-box, .social, .info-box {display:inline-block; vertical-align:middle;}
+				.rating-box {margin:0 0 0 8px;
+					.rating {text-align:left; font-size:10px; font-weight:700;}
+					.star-ratings-sprite {background:url("../img/sprite-stars.png") repeat-x; height:11px; width:60px; margin:0 auto; font-size:0;
+																line-height:0; overflow:hidden; text-indent:-999em;
+						&-rating {background:url("../img/sprite-stars.png") repeat-x; float:left; display:block; height:11px; background-position:0 100%;}
+					}
+				}
+				.social {margin:0 0 0 8px; font-size:33px;
+					.fa-twitter-square {color:$twitter;}
+					.fa-facebook-official {color:$fb;}
+					a:hover {text-decoration:none;}
+				}
+				.info-box {background-color:#fff; font-size:12px; border:1px solid $gray1; @include opacity(0.9); color:$gray1;
+					.comment-count, .img-responsive, .date {display:inline-block; padding:5px 6px;}
+				}
+			}
+		}
+  }
+}
+@media (max-width:767px) {
+	#mid-section {
+		.mid-row {
+			.col-sm-2 {
+				.text-col {padding-top:10px; text-align:center;
+					h2 {text-align:center; font-size:24px;}
+				}
+			}
+		}
+	}
+}
+
+/* FOOTER */
 #footer {position:relative; top:120px; max-width:1920px; margin:0 auto; background-color:$gray2;
   .nav-tabs {height:54px; background-color:$gray2; border-bottom:1px solid #dedede;
 		.active a {height:53px; padding:0 20px; border:0 !important; @include border-radius(0 !important); background-color:transparent; color:$active;}

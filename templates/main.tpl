@@ -6,6 +6,7 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<link rel="stylesheet" href="{$url}/assets/css/bootstrap.min.css" />
 			<link rel="stylesheet" type="text/css" href="assets/css/MyFontsWebfontsKit.css">
+			<link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
 			<link rel="stylesheet" href="{$url}/assets/css/style.css" />
 			<link rel="shortcut icon" type="image/x-icon" href="{$img}favicon.png" />
 			<title>Sample project</title>
@@ -31,8 +32,8 @@
 							<div class="collapse navbar-collapse" id="menu">
 								<ul class="nav navbar-nav navbar-right">
 									<li class="active"><a href="{$url}#home">Strona główna</a></li>
-									<li class=""><a href="#">Link1</a></li>
-									<li class=""><a href="#">Kontakt</a></li>
+									<li class=""><a href="{$url}#mid-section">Część środkowa</a></li>
+									<li class=""><a href="{$url}#footer">Kontakt</a></li>
 								</ul>
 							</div>
 						</div>
@@ -68,27 +69,27 @@
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane fade in active" id="home">
 							{include file="include/tabs_details.tpl" item1="Test1" item2="Test2" item3="Test3"
-		item4="Test4" item5="Test5" item6="Test6" item7="Test7" item8="Test8"}
+							item4="Test4" item5="Test5" item6="Test6" item7="Test7" item8="Test8"}
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="profile">
 							{include file="include/tabs_details.tpl" item1="Test1" item2="Test2111" item3="Test3"
-		item4="Test4" item5="Test5" item6="Test6111111" item7="Test71111" item8="Test8"}
+							item4="Test4" item5="Test5" item6="Test6111111" item7="Test71111" item8="Test8"}
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="messages">
 							{include file="include/tabs_details.tpl" item1="Test1" item2="Test233333" item3="Test3"
-		item4="Test4" item5="Test5" item6="Test62222" item7="Test7333333" item8="Test8"}
+							item4="Test4" item5="Test5" item6="Test62222" item7="Test7333333" item8="Test8"}
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="settings">
 							{include file="include/tabs_details.tpl" item1="Test1" item2="Test2444" item3="Test3"
-		item4="Test444444" item5="Test5" item6="Test64444" item7="Test7" item8="Test8"}
+							item4="Test444444" item5="Test5" item6="Test64444" item7="Test7" item8="Test8"}
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="settings2">
 							{include file="include/tabs_details.tpl" item1="Test155555" item2="Test2" item3="Test3"
-		item4="Test4" item5="Test55555555" item6="Test6" item7="Test7" item8="Test8"}
+							item4="Test4" item5="Test55555555" item6="Test6" item7="Test7" item8="Test8"}
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="settings3">
 							{include file="include/tabs_details.tpl" item1="Test177777" item2="Test2" item3="Test377777777"
-		item4="Test4" item5="Test5" item6="Test6555555" item7="Test7" item8="Test87777777777"}
+							item4="Test4" item5="Test5" item6="Test6555555" item7="Test7" item8="Test87777777777"}
 						</div>
 					</div>
 				</div>
